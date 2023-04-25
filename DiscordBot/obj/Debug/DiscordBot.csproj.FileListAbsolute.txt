@@ -1,0 +1,8 @@
+C:\Users\cC34250\OneDrive - Dai Nippon Printing Co., Ltd\ドキュメント\Repositorys\DiscordBot\DiscordBotDev\DiscordBot\obj\Debug\DiscordBot.csproj.AssemblyReference.cache
+C:\Users\cC34250\OneDrive - Dai Nippon Printing Co., Ltd\ドキュメント\Repositorys\DiscordBot\DiscordBotDev\DiscordBot\obj\Debug\DiscordBot.csproj.SuggestedBindingRedirects.cache
+C:\Users\cC34250\OneDrive - Dai Nippon Printing Co., Ltd\ドキュメント\Repositorys\DiscordBot\DiscordBotDev\DiscordBot\obj\Debug\DiscordBot.csproj.CoreCompileInputs.cache
+C:\Users\cC34250\OneDrive - Dai Nippon Printing Co., Ltd\ドキュメント\Repositorys\DiscordBot\DiscordBotDev\DiscordBot\bin\Debug\DiscordBot.exe.config
+C:\Users\cC34250\OneDrive - Dai Nippon Printing Co., Ltd\ドキュメント\Repositorys\DiscordBot\DiscordBotDev\DiscordBot\bin\Debug\DiscordBot.exe
+C:\Users\cC34250\OneDrive - Dai Nippon Printing Co., Ltd\ドキュメント\Repositorys\DiscordBot\DiscordBotDev\DiscordBot\bin\Debug\DiscordBot.pdb
+C:\Users\cC34250\OneDrive - Dai Nippon Printing Co., Ltd\ドキュメント\Repositorys\DiscordBot\DiscordBotDev\DiscordBot\obj\Debug\DiscordBot.exe
+C:\Users\cC34250\OneDrive - Dai Nippon Printing Co., Ltd\ドキュメント\Repositorys\DiscordBot\DiscordBotDev\DiscordBot\obj\Debug\DiscordBot.pdb
