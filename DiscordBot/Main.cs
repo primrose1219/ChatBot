@@ -12,9 +12,9 @@ namespace DiscordBot
         private static string[] messages; // 投稿するメッセージを格納する配列
 
         private static DiscordSocketClient client; // Discordサーバーとの接続を管理するクライアント
-        private static ulong serverId = 123456789; // 投稿するサーバーのID
-        private static ulong channelId = 123456789; // 投稿するチャンネルのID
-        private static TimeSpan interval = TimeSpan.FromMinutes(30); // 投稿する間隔
+        private static ulong serverId = 695915901492396043; // 投稿するサーバーのID
+        private static ulong channelId = 1100284988190109716; // 投稿するチャンネルのID
+        private static TimeSpan interval = TimeSpan.FromMinutes(1); // 投稿する間隔
 
         static void Main(string[] args)
         {
@@ -26,7 +26,7 @@ namespace DiscordBot
             client.Log += LogAsync; // クライアントのログ出力時に呼び出されるメソッドを登録する
             client.Ready += ReadyAsync; // クライアントがDiscordサーバーと接続し、準備ができた時に呼び出されるメソッドを登録する
 
-            client.LoginAsync(TokenType.Bot, "Your bot token here"); // ボットのトークンを指定してログインする
+            client.LoginAsync(TokenType.Bot, "MTEwMDI4Mjg4NzI1OTA0OTk5NQ.G4GsJr.rOuFbddmEqQP3iZ8k0QIgnqupjUHAqOxZhRDTQ"); // ボットのトークンを指定してログインする
             client.StartAsync(); // クライアントを起動する
 
             Task.Delay(-1).GetAwaiter().GetResult(); // プログラムが終了しないように待機する
