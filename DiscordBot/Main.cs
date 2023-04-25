@@ -59,6 +59,7 @@ namespace DiscordBot
             {
                 while (true)
                 {
+                    await channel.SendMessageAsync(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")); // 現在時刻を投稿する
                     int index = new Random().Next(messages.Length); // メッセージのインデックスをランダムに取得する
                     await channel.SendMessageAsync(messages[index]); // メッセージを投稿する
                     await Task.Delay(interval); // 次の投稿まで待機する
