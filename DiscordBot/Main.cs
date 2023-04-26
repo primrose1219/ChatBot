@@ -15,7 +15,7 @@ namespace DiscordBot
         private static ulong serverId = 695915901492396043; // 投稿するサーバーのID
         private static ulong channelId = 1100284988190109716; // 投稿するチャンネルのID
         private static TimeSpan interval = TimeSpan.FromHours(1); // 投稿する間隔
-        private static int targetHour = 4; // 投稿する整数時刻
+        //private static int targetHour = 4; // 投稿する整数時刻
 
         static void Main(string[] args)
         {
@@ -56,24 +56,24 @@ namespace DiscordBot
             }
 
             // 定期的にメッセージを投稿する
-Task.Run(async () =>
-{
-    while (true)
-    {
-        DateTime now = DateTime.Now;
-        if (now.Hour == 4 && now.Minute == 0 && now.Second == 0)
-        {
-            await channel.SendMessageAsync("午前4時です。特定の文章を送信します。");
-        }
-        else
-        {
-            int index = new Random().Next(messages.Length); // メッセージのインデックスをランダムに取得する
-            await channel.SendMessageAsync(messages[index]); // メッセージを投稿する
-        }
+            Task.Run(async () =>
+            {
+                while (true)
+                {
+                    DateTime now = DateTime.Now;
+                    if (now.Hour == 4 && now.Minute == 0 && now.Second == 0)
+                    {
+                        await channel.SendMessageAsync("午前4時に何してるんですか");
+                    }
+                    else
+                    {
+                        int index = new Random().Next(messages.Length); // メッセージのインデックスをランダムに取得する
+                        await channel.SendMessageAsync(messages[index]); // メッセージを投稿する
+                    }
 
-        await Task.Delay(interval); // 次の投稿まで待機する
-    }
-});
+                    await Task.Delay(interval); // 次の投稿まで待機する
+                }
+            });
 
             return Task.CompletedTask;
         }
