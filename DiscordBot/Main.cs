@@ -57,9 +57,25 @@ namespace DiscordBot
             // 定期的にメッセージを投稿する
             Task.Run(async () =>
             {
+                DateTime lastFriday = DateTime.MinValue;
+
                 while (true)
                 {
                     await channel.SendMessageAsync(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")); // 現在時刻を投稿する
+
+                    var now = DateTime.Now; // 現在時刻を取得する
+                    if (now.Hour == 4 && now.Minute == 0) // 午前4時かどうかを判定する
+                    {
+                        await channel.SendMessageAsync("午前4時に何してるんですか。"); // 指定した文章を投稿する
+                    }
+
+                    var DayOfWeek = DateTime.Now.DayOfWeek; // 現在の曜日を取得する
+                    if (DayOfWeek == DayOfWeek.Wednesday && lastFriday.AddDays(7) <= now) // 金曜日で、1週間以上前に前回投稿していた場合
+                    {
+                        await channel.SendMessageAsync("Today is Friday in California"); // 指定した文章を投稿する
+                        lastFriday = now; // 最終投稿日を更新する
+                    }
+
                     int index = new Random().Next(messages.Length); // メッセージのインデックスをランダムに取得する
                     await channel.SendMessageAsync(messages[index]); // メッセージを投稿する
                     await Task.Delay(interval); // 次の投稿まで待機する
