@@ -74,8 +74,11 @@ namespace DiscordBot
                         lastFriday = now; // 最終投稿日を更新する
                     }
 
-                    int index = new Random().Next(messages.Length); // メッセージのインデックスをランダムに取得する
-                    await channel.SendMessageAsync((DateTime.Now.ToString("g")) + ("      ") + messages[index]); // メッセージを投稿する
+                    if (DateTime.Now.Minute == 0 || (DateTime.Now.Minute % 10) == 0) // 現在時刻が整数時刻である場合
+                    {
+                        int index = new Random().Next(messages.Length); // メッセージのインデックスをランダムに取得する
+                        await channel.SendMessageAsync((DateTime.Now.ToString("g")) + ("      ") + messages[index]); // メッセージを投稿する
+                    }
                     await Task.Delay(interval); // 次の投稿まで待機する
                 }
             });
