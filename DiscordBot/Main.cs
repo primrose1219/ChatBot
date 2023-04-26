@@ -70,7 +70,7 @@ namespace DiscordBot
                     var DayOfWeek = DateTime.Now.DayOfWeek; // 現在の曜日を取得する
                     if (DayOfWeek == DayOfWeek.Friday && lastFriday.AddDays(7) <= now) // 金曜日で、1週間以上前に前回投稿していた場合
                     {
-                        await channel.SendMessageAsync("Today is Friday in California"); // 指定した文章を投稿する
+                        await channel.SendMessageAsync("__**Today is Friday in California**__"); // 指定した文章を投稿する
                         lastFriday = now; // 最終投稿日を更新する
                     }
 
