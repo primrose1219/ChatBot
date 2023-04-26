@@ -26,7 +26,7 @@ namespace DiscordBot
             client.Log += LogAsync; // クライアントのログ出力時に呼び出されるメソッドを登録する
             client.Ready += ReadyAsync; // クライアントがDiscordサーバーと接続し、準備ができた時に呼び出されるメソッドを登録する
 
-            client.LoginAsync(TokenType.Bot, "MTEwMDI4Mjg4NzI1OTA0OTk5NQ.G4GsJr.rOuFbddmEqQP3iZ8k0QIgnqupjUHAqOxZhRDTQ"); // ボットのトークンを指定してログインする
+            client.LoginAsync(TokenType.Bot, "MTEwMDI4Mjg4NzI1OTA0OTk5NQ.GecAD-.1lbEsCPdN7gWWLPAMUOeiIPgXZ74SB2pRKcPv4"); // ボットのトークンを指定してログインする
             client.StartAsync(); // クライアントを起動する
 
             Task.Delay(-1).GetAwaiter().GetResult(); // プログラムが終了しないように待機する
