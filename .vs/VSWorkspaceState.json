@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DiscordBot",
+    "\\DiscordBot\\obj",
+    "\\DiscordBot\\obj\\Debug",
+    "\\DiscordBot\\obj\\Debug\\TempPE",
+    "\\DiscordBot\\packages",
+    "\\DiscordBot\\packages\\Microsoft.Extensions.DependencyInjection.Abstractions.7.0.0",
+    "\\DiscordBot\\packages\\Microsoft.Extensions.DependencyInjection.Abstractions.7.0.0\\buildTransitive"
+  ],
+  "PreviewInSolutionExplorer": false
+}
