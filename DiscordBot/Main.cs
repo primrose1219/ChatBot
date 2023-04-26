@@ -13,7 +13,7 @@ namespace DiscordBot
 
         private static DiscordSocketClient client; // Discordサーバーとの接続を管理するクライアント
         private static ulong serverId = 695915901492396043; // 投稿するサーバーのID
-        private static ulong channelId = 1100284988190109716; // 投稿するチャンネルのID
+        private static ulong channelId = 1100573361127563364; // 投稿するチャンネルのID
         private static TimeSpan interval = TimeSpan.FromMinutes(1); // 投稿する間隔
 
         static void Main(string[] args)
@@ -61,8 +61,6 @@ namespace DiscordBot
 
                 while (true)
                 {
-                    await channel.SendMessageAsync(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")); // 現在時刻を投稿する
-
                     var now = DateTime.Now; // 現在時刻を取得する
                     if (now.Hour == 4 && now.Minute == 0) // 午前4時かどうかを判定する
                     {
@@ -70,14 +68,14 @@ namespace DiscordBot
                     }
 
                     var DayOfWeek = DateTime.Now.DayOfWeek; // 現在の曜日を取得する
-                    if (DayOfWeek == DayOfWeek.Wednesday && lastFriday.AddDays(7) <= now) // 金曜日で、1週間以上前に前回投稿していた場合
+                    if (DayOfWeek == DayOfWeek.Friday && lastFriday.AddDays(7) <= now) // 金曜日で、1週間以上前に前回投稿していた場合
                     {
                         await channel.SendMessageAsync("Today is Friday in California"); // 指定した文章を投稿する
                         lastFriday = now; // 最終投稿日を更新する
                     }
 
                     int index = new Random().Next(messages.Length); // メッセージのインデックスをランダムに取得する
-                    await channel.SendMessageAsync(messages[index]); // メッセージを投稿する
+                    await channel.SendMessageAsync((DateTime.Now.ToString("g")) + ("      ") + messages[index]); // メッセージを投稿する
                     await Task.Delay(interval); // 次の投稿まで待機する
                 }
             });
