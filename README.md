@@ -1,3 +1,3 @@
 # DiscordBot
 Initial commit
-定期的言葉を発するBotです。
+定期的に言葉を発するBotです。
